@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="Test" Class="DBDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=ABHISHEK;Initial Catalog=Test;Integrated Security=True" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="TestConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.[User]" Member="Users">
+    <Type Name="User">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Age" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Email" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="CreateOn" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Deleted" Storage="_Status" Type="System.Int32" CanBeNull="false" />
+    </Type>
+  </Table>
+</Database>

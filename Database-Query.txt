@@ -1,0 +1,47 @@
+**********************Reference******************
+1. https://www.youtube.com/watch?v=d7bLNYfBP4k
+2. https://www.c-sharpcorner.com/UploadFile/3d39b4/crud-operations-using-linq-to-sql-in-mvc/
+
+
+
+**********************steps for creating the project******************
+
+1. Create a project in Visual studio:
+	vs-> create new project -> MVC
+	
+2. Run the Project and check working or not.
+
+3. Add .DBML file in project:	
+	select project-> add -> new item -> Linq to SQL classes
+	
+4. Add DB Connection:
+	Go to Server Explorer -> select server and DB
+
+5. Drag and Drop the Table in the .DBML file
+6. Go to controller at the connection and use linq query:
+	 DBDataContext db=new DBDataContext();
+	 var userDetails= from x in db.Users select x.Email;
+	 
+	 
+	 
+	 
+********************DB Query********************************************
+//Query: create Database
+Create database Test
+
+//Query: Create Table
+CREATE TABLE [User]  
+(  
+     Id int Primary Key Identity(1,1),  
+     Name nvarchar(50) not null,  
+     Age int not null,  
+     Email nvarchar(50)not null,  
+	 Deleted int not null,
+     CreateOn dateTime default Getdate()  
+)
+
+//Query: Insert Data
+insert into [user] values('Abhishek',24,'abhishek.equitec@gmail.com',1,getdate())
+insert into [user] values('Ajit',24,'ajit.equitec@gmail.com',1,getdate())
+insert into [user] values('Pooja',24,'Pooja.equitec@gmail.com',1,getdate())
+insert into [user] values('Heena',25,'heena.equitec@gmail.com',1,getdate())
